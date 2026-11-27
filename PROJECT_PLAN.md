@@ -91,6 +91,8 @@ Sandbox는 원거리 공격, 근거리 공격, 패링과 회피를 제공한다.
 
 ## 개발 순서와 미결정 사항
 
+2026-11-27 결정에 따라 플레이 가능한 Sandbox, 규칙 기반 시연과 기록 재생을 Core 모델에 앞서 구현한다. Core 연동형 조작과 모델 평가는 공개 인터페이스가 준비된 뒤 추가한다. [Sandbox 작업 카드](https://github.com/orgs/ex-anima/projects/1/views/1?pane=issue&itemId=320067130)
+
 1. C++ 표준, 지원 플랫폼, 빌드·테스트 도구와 의존성을 결정한다.
 2. Core 공개 API, JSON Schema, 데이터셋과 모델 Binary 계약을 상세 설계한다.
 3. Core의 수치 연산, 학습, 추론, Behavioral Cloning과 모델 왕복 검증을 구현한다.
