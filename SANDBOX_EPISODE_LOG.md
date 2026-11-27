@@ -6,7 +6,7 @@ Combat Sandbox의 초기 시연과 규칙 기반 정책 실행을 재현하기 �
 
 `--record NEW_DIRECTORY`는 새 디렉터리를 만들고 에피소드별로 `episode-1.tsv`, `episode-2.tsv`를 기록한다. 같은 실행에서 플레이어가 재시작하면 번호가 증가하고 초기 시드는 유지된다. 저장 중에는 이름 끝에 `.partial`이 붙는다. 종료 레코드를 기록하고 파일을 닫은 뒤에만 `.tsv`로 이름을 바꾼다.
 
-1. 메타데이터는 버전 표기, `seed=<uint32>`, `controller=<human|cautious|aggressive>`를 탭으로 구분한다. 새 로그에는 거리 판단 중심 전투 규칙을 뜻하는 `# sandbox-episode-v2`가 들어간다. 기존 `# sandbox-episode-v1`은 최초 전투 규칙으로 재생한다. 두 버전의 열과 종료 레코드는 동일하다.
+1. 메타데이터는 버전 표기, `seed=<uint32>`, `controller=<human|cautious|aggressive|external>`을 탭으로 구분한다. 새 로그에는 거리 판단 중심 전투 규칙을 뜻하는 `# sandbox-episode-v2`가 들어간다. 기존 `# sandbox-episode-v1`은 최초 전투 규칙으로 재생한다. 두 버전의 열과 종료 레코드는 동일하다. `external`은 [표준 입출력 정책](SANDBOX_DECISIONS.md#외부-정책-실행)의 기록이다.
 2. 열 이름 행 뒤에 시뮬레이션 틱마다 한 행을 기록한다. UTF-8 호환 ASCII, 탭 구분, LF 줄바꿈을 사용한다.
 3. 마지막 줄은 `# end`와 종료 사유를 탭으로 구분한다. 종료 사유는 `won`, `lost`, `limit`(틱 한도), `stopped`(정상 종료), `restart`다.
 
