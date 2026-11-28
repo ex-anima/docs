@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ex Anima Core v0.1.0 training configuration",
+  "type": "object",
+  "required": ["input_features", "hidden_units", "labels"],
+  "$defs": {
+    "names": {
+      "type": "array",
+      "maxItems": 4096,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 256 }
+    }
+  },
+  "properties": {
+    "input_features": {
+      "$ref": "#/$defs/names",
+      "minItems": 1
+    },
+    "hidden_units": { "type": "integer", "minimum": 1, "maximum": 4096 },
+    "labels": {
+      "$ref": "#/$defs/names",
+      "minItems": 2
+    },
+    "seed": { "type": "integer", "minimum": 0, "maximum": 4294967295, "default": 42 },
+    "epochs": { "type": "integer", "minimum": 1, "maximum": 10000, "default": 200 },
+    "learning_rate": { "type": "number", "exclusiveMinimum": 0, "maximum": 1, "default": 0.03 },
+    "balance_classes": { "type": "boolean", "default": false }
+  }
+}

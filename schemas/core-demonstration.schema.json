@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ex Anima Core v0.1.0 demonstration row",
+  "type": "object",
+  "required": ["observation", "decision"],
+  "properties": {
+    "observation": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 4096,
+      "items": { "type": "number" }
+    },
+    "decision": { "type": "string", "minLength": 1, "maxLength": 256 }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ex Anima exanima-mlp-v1 model metadata",
+  "type": "object",
+  "required": [
+    "format", "dtype", "byte_order", "parameter_order",
+    "input_features", "hidden_units", "labels", "parameter_count"
+  ],
+  "$defs": {
+    "names": {
+      "type": "array",
+      "maxItems": 4096,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 256 }
+    }
+  },
+  "properties": {
+    "format": { "const": "exanima-mlp-v1" },
+    "dtype": { "const": "float32" },
+    "byte_order": { "const": "little" },
+    "parameter_order": { "const": "w1,b1,w2,b2" },
+    "input_features": {
+      "$ref": "#/$defs/names",
+      "minItems": 1
+    },
+    "hidden_units": { "type": "integer", "minimum": 1, "maximum": 4096 },
+    "labels": {
+      "$ref": "#/$defs/names",
+      "minItems": 2
+    },
+    "parameter_count": { "type": "integer", "minimum": 6, "maximum": 1000000 }
+  }
+}
