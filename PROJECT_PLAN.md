@@ -113,4 +113,6 @@ Sandbox는 원거리 공격, 근거리 공격, 패링과 회피를 제공한다.
 3. Core 계약을 바탕으로 Sandbox 어댑터와 Visualizer의 후속 범위를 정한다.
 4. Experiment Suite에서 데이터량, 행동 성향과 자원 비용을 검증하고 v0.1.0 출시를 검토한다.
 
-라이선스, 시각화 기술과 Adam·프레임 스태킹의 포함 여부는 미결정이다.
+v0.1.0의 Core, Combat Sandbox, Experiment Suite와 문서에는 MIT 라이선스를 적용한다. 안정형·공격형 모델은 실행 예제로 동봉한다. [MIT 라이선스](LICENSE)
+
+시각화 기술과 Adam·프레임 스태킹의 포함 여부는 미결정이다.
